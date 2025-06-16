@@ -18,6 +18,7 @@ import (
 
 func main() {
 	cfg := config.MustLoad()
+	
 	dbURI := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=%s",
 		cfg.PostgresUser, cfg.PostgresPassword, cfg.PostgresHost, cfg.PostgresPort, cfg.PostgresDB, cfg.PostgresSSLMode)
 	if m, err := migrate.New("file://migrations/postgresql", dbURI); err != nil {

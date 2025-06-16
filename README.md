@@ -1,3 +1,4 @@
+**.env example**
 ```
 BOT_TOKEN=
 BOT_PORT=
